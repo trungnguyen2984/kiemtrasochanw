@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nhapso">Nhap so:</label><br>
+    <input type="number" id="nhapso"><br>
+    <button type="button" onclick="displayMessage();">Kiem tra</button>
+    <p id="displayResult"></p>
+
+    <script>
+        function displayMessage(){
+            let checkNum = parseInt(document.getElementById('nhapso').value);
+
+            if (checkNum % 2 === 0){
+                document.getElementById('displayResult').innerHTML = checkNum + ' La so chan';
+            }else {
+                document.getElementById('displayResult').innerHTML = checkNum + ' La so le';
+            }
+        }
+    </script>
+</body>
+</html>
